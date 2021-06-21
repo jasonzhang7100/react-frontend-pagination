@@ -1,12 +1,12 @@
 import React from "react";
 
-const Posts = ({ loading, posts }) => {
+const Posts = ({ loading, currentPosts }) => {
   if (loading) {
     return <div>loading...</div>;
   }
   return (
     <ul className="list-group mb-4">
-      {posts.map(post => (
+      {currentPosts.map(post => (
         <li key={post.id} className="list-item">
           {post.title}
         </li>
